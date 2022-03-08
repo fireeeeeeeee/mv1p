@@ -70,7 +70,7 @@ def getRTfromE(E,pts1,pts2):
     
     
 
-def calcRT(K1,K2,pts1,pts2):
+def calcRT(K1,K2,pts1,pts2,method=cv2.FM_LMEDS):
     mask=(pts1[2]>0) & (pts2[2]>0)
     pts1=pts1[:,mask]
     pts2=pts2[:,mask]
@@ -79,7 +79,7 @@ def calcRT(K1,K2,pts1,pts2):
     pts2=np.linalg.inv(K2) @ pts2
     pts1/=pts1[2]
     pts2/=pts2[2]
-    E,mask=cv2.findFundamentalMat(pts1[:2].T,pts2[:2].T, method=cv2.FM_LMEDS)
+    E,mask=cv2.findFundamentalMat(pts1[:2].T,pts2[:2].T, method)
     #E=K2.T @ F @ K1
     return getRTfromE(E,pts1[:2],pts2[:2])
 

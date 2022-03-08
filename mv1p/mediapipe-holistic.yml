@@ -1,0 +1,10 @@
+module: "easymocap.estimator.mediapipe_wrapper.Detector"
+args:
+  nViews: 2
+  to_openpose: True
+  model_type: holistic
+  show: True
+  # model part: 
+  min_detection_confidence: 0.5
+  min_tracking_confidence: 0.5
+  model_complexity: 2

@@ -1,4 +1,4 @@
 {
-    "cam_ids": [0, "http://admin:admin@10.186.235.195:8081/"],
+    "cam_ids": [0, "http://admin:admin@10.186.207.1:8081/"],
     "cam_names": ["0", "1"]
 }

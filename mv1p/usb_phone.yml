@@ -1,0 +1,6 @@
+module: "easymocap.camera.usb_phone.MultiUSB"
+args:
+  cam_ids: [0, "http://admin:admin@10.186.207.1:8081/"]
+  camnames: ['0', '1']
+  selfie: [0, 0]
+  params: "data/camera/usb"
